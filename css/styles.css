@@ -499,6 +499,7 @@ button {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  gap: 24px;
 }
 
 .footer-email-input {
@@ -507,16 +508,17 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 264px;
   height: 40px;
-  background-color: #2e2f42;
-}
-
-.footer-email-input::placeholder {
+  background-color: transparent;
   font-weight: 400;
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.04em;
-  color: #fff;
-  padding: 8px 16px;
+  color: #ffffff;
+  padding-left: 16px;
+}
+
+.footer-email-input::placeholder {
+  color: #ffffff;
 }
 
 .button-email-submit {
@@ -530,10 +532,11 @@ button {
   min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
-  margin-left: 20px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: none;
 }
 
 .icon-airplane {
