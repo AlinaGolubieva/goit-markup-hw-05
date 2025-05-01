@@ -69,11 +69,12 @@
             Effective Solutions <br />
             for Your Business
           </h1>
-          <button class="button-service" type="button">Order Service</button>
+          <button class="button-service" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- #endregion main banner -->
-
       <!-- #region solutions -->
       <section class="section-solutions">
         <div class="container">
@@ -476,7 +477,104 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-social-link-text">Subscribe</p>
+          <div class="footer-form">
+            <form name="subscribe_form">
+              <label>
+                <input
+                  class="footer-email-input"
+                  type="email"
+                  name="useremail"
+                  placeholder="E-mail"
+                />
+              </label>
+            </form>
+            <button class="button-email-submit" type="submit">
+              Submit
+              <svg class="icon-airplane" width="24" height="24">
+                <use href="./images/icons.svg#icon-airplane"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- #region modal -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <div class="button-close" data-modal-close>
+          <svg class="svg-close" height="8" width="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form>
+          <label for="label-name" class="label-popup">Name</label>
+          <div class="input-icon-wrapper">
+            <svg class="svg-popup" height="24" width="18">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+            <input
+              class="form-input"
+              type="text"
+              name="username"
+              id="label-name"
+            />
+          </div>
+          <label for="label-phone" class="label-popup">Phone</label>
+          <div class="input-icon-wrapper">
+            <svg class="svg-popup" height="24" width="18">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            <input
+              class="form-input"
+              type="tel"
+              name="userphone"
+              id="label-phone"
+            />
+          </div>
+          <label for="label-email" class="label-popup">Email</label>
+          <div class="input-icon-wrapper">
+            <svg class="svg-popup" height="24" width="18">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+            <input
+              class="form-input"
+              type="email"
+              name="useremail"
+              id="label-email"
+            />
+          </div>
+          <label for="label-comment" class="label-popup">Comment</label>
+          <div class="input-icon-wrapper textarea">
+            <textarea
+              name="Comment"
+              placeholder="Text input"
+              class="textarea-comment"
+            ></textarea>
+          </div>
+          <div class="input-icon-wrapper checkbox">
+            <label class="label-popup-checkbox" for="checkbox-privacy">
+              <input
+                type="checkbox"
+                name="checkbox-privacy"
+                id="checkbox-privacy"
+              />
+              <span class="form-checkmark">
+                <svg class="svg-checkbox" height="10" width="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;
+              <a href="#" class="checkbox-link">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="button button-modal-submit" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- #endregion modal -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

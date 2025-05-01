@@ -186,7 +186,6 @@ button {
 }
 
 .button-service {
-  font-family: "Roboto", sans-serif;
   background: #4d5ae5;
   border: none;
   font-weight: 500;
@@ -366,7 +365,6 @@ button {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
-  /* height: 420px; */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -385,7 +383,6 @@ button {
 }
 
 .ovrlay-text {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.02em;
@@ -469,7 +466,6 @@ button {
 }
 
 .footer-social-link-text {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.02em;
@@ -493,4 +489,294 @@ button {
 
 .svg-footer {
   fill: #f4f4fd;
+}
+
+.footer-subscribe {
+  margin-left: auto;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.footer-email-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  min-width: 264px;
+  height: 40px;
+  background-color: #2e2f42;
+}
+
+.footer-email-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.button-email-submit {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  margin-left: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-airplane {
+  fill: currentColor;
+  margin-left: 16px;
+}
+
+.button-email-submit:hover {
+  background-color: #31d0aa;
+}
+
+.footer-email-input:hover {
+  border: 1px solid #31d0aa;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+
+  padding: 24px;
+
+  transform: translate(-50%, -50%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-50%, -100%);
+}
+
+.button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-close:hover,
+.button-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.button-close:hover .svg-close,
+.button-close:focus .svg-close {
+  fill: #fff;
+}
+.modal-title {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  padding-top: 48px;
+  margin-bottom: 16px;
+}
+
+.label-popup {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding-left: 38px;
+}
+
+.form-input:focus + .svg-popup,
+.form-input:hover {
+  border: 1px solid #4d5ae5;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.svg-popup {
+  position: absolute;
+  left: 16px;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* При наведенні курсором svg стає синьою */
+.input-icon-wrapper:has(input:focus) .svg-popup,
+.input-icon-wrapper:has(input:hover) .svg-popup {
+  fill: #4d5ae5;
+}
+
+.textarea {
+  margin-bottom: 16px;
+}
+
+.textarea-comment {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+
+  resize: none;
+  outline: none;
+}
+
+.textarea-comment::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.checkbox {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.label-popup-checkbox {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 0;
+  /* Поставити в один рядок з сheckbox*/
+  display: flex;
+  align-items: center;
+}
+
+/* Сховати стандартний чекбокс */
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.form-checkmark {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: #fff;
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+  /* Вирівняти checkbox по центру */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-checkbox {
+  border-radius: 2px;
+  fill: transparent;
+  stroke: #f4f4fd;
+}
+
+/* Активований стан чекбоксу */
+.checkbox input[type="checkbox"]:checked + .form-checkmark {
+  background-color: #404bbf;
+  border: none;
+}
+
+.checkbox input[type="checkbox"]:checked + .form-checkmark .svg-checkbox {
+  fill: #f4f4fd;
+  stroke: #f4f4fd;
+}
+
+.checkbox-link {
+  line-height: 133%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+  text-decoration: none;
+}
+
+.button-modal-submit {
+  padding: 16px 32px;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal-submit:hover,
+.button-modal-submit:focus {
+  background-color: #404bbf;
 }
