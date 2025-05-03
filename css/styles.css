@@ -733,10 +733,8 @@ button {
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  /* Поставити в один рядок з сheckbox*/
-  display: flex;
-  align-items: center;
 }
+
 .form-checkmark {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -744,6 +742,7 @@ button {
   height: 16px;
   width: 16px;
   margin-right: 8px;
+  fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -751,7 +750,6 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  fill: transparent;
 }
 
 .svg-checkbox {
