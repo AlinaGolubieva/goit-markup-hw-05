@@ -508,60 +508,70 @@
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form>
-          <label for="label-name" class="label-popup">Name</label>
-          <div class="input-icon-wrapper">
-            <svg class="svg-popup" height="24" width="18">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-            <input
-              class="form-input"
-              type="text"
-              name="username"
-              id="label-name"
-            />
-          </div>
-          <label for="label-phone" class="label-popup">Phone</label>
-          <div class="input-icon-wrapper">
-            <svg class="svg-popup" height="24" width="18">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            <input
-              class="form-input"
-              type="tel"
-              name="userphone"
-              id="label-phone"
-            />
-          </div>
-          <label for="label-email" class="label-popup">Email</label>
-          <div class="input-icon-wrapper">
-            <svg class="svg-popup" height="24" width="18">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-            <input
-              class="form-input"
-              type="email"
-              name="useremail"
-              id="label-email"
-            />
-          </div>
-          <label for="label-comment" class="label-popup">Comment</label>
-          <div class="input-icon-wrapper textarea">
-            <textarea
-              name="Comment"
-              placeholder="Text input"
-              class="textarea-comment"
-              id="label-comment"
-            ></textarea>
-          </div>
-          <div class="input-icon-wrapper checkbox">
-            <label class="label-popup-checkbox" for="checkbox-privacy">
+          <div class="form-container">
+            <label for="user-name" class="label-popup">Name</label>
+            <div class="input-icon-wrapper">
               <input
-                type="checkbox"
-                name="checkbox-privacy"
-                id="checkbox-privacy"
+                class="form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
               />
+              <svg class="svg-popup" height="24" width="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-container">
+            <label for="user-phone" class="label-popup">Phone</label>
+            <div class="input-icon-wrapper">
+              <input
+                class="form-input"
+                type="tel"
+                name="userphone"
+                id="user-phone"
+              />
+              <svg class="svg-popup" height="24" width="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-container">
+            <label for="user-email" class="label-popup">Email</label>
+            <div class="input-icon-wrapper">
+              <input
+                class="form-input"
+                type="email"
+                name="useremail"
+                id="user-email"
+              />
+              <svg class="svg-popup" height="24" width="18">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-comment">
+            <label for="user-comment" class="label-popup">Comment</label>
+            <div class="input-icon-wrapper">
+              <textarea
+                name="user-comment"
+                placeholder="Text input"
+                class="textarea-comment"
+                id="user-comment"
+              ></textarea>
+            </div>
+          </div>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              name="user-privacy"
+              value="true"
+              id="user-privacy"
+              class="visually-hidden"
+            />
+            <label class="label-popup-checkbox" for="user-privacy">
               <span class="form-checkmark">
-                <svg class="svg-checkbox" height="10" width="8">
+                <svg class="svg-checkbox" height="8" width="10">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
@@ -569,7 +579,7 @@
               <a href="#" class="checkbox-link">Privacy Policy</a>
             </label>
           </div>
-          <button class="button button-modal-submit" type="submit">Send</button>
+          <button class="button-modal-submit" type="submit">Send</button>
         </form>
       </div>
     </div>

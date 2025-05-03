@@ -603,7 +603,7 @@ button {
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border-radius: 50%;
@@ -611,7 +611,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -636,6 +635,10 @@ button {
   margin-bottom: 16px;
 }
 
+.form-container {
+  margin-bottom: 8px;
+}
+
 .label-popup {
   font-weight: 400;
   font-size: 12px;
@@ -643,6 +646,12 @@ button {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+  display: block;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .form-input {
@@ -650,19 +659,15 @@ button {
   border-radius: 4px;
   width: 100%;
   height: 40px;
-  outline: none;
+  outline: transparent;
   padding-left: 38px;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus + .svg-popup,
 .form-input:hover {
-  border: 1px solid #4d5ae5;
-}
-
-.input-icon-wrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 8px;
+  border-color: #4d5ae5;
 }
 
 .svg-popup {
@@ -672,6 +677,7 @@ button {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* При наведенні курсором svg стає синьою */
@@ -680,7 +686,7 @@ button {
   fill: #4d5ae5;
 }
 
-.textarea {
+.form-comment {
   margin-bottom: 16px;
 }
 
@@ -697,11 +703,12 @@ button {
   height: 120px;
 
   resize: none;
-  outline: none;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textarea-comment::placeholder {
-  color: rgba(46, 47, 66, 0.4);
+.textarea-comment:hover {
+  border-color: #4d5ae5;
 }
 
 .checkbox {
@@ -716,17 +723,10 @@ button {
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 0;
   /* Поставити в один рядок з сheckbox*/
   display: flex;
   align-items: center;
 }
-
-/* Сховати стандартний чекбокс */
-.checkbox input[type="checkbox"] {
-  display: none;
-}
-
 .form-checkmark {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -734,11 +734,13 @@ button {
   height: 16px;
   width: 16px;
   margin-right: 8px;
-  transition: background-color 0.3s;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Вирівняти checkbox по центру */
-  display: flex;
+  /* display: flex; */
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  fill: transparent;
 }
 
 .svg-checkbox {
@@ -747,13 +749,12 @@ button {
   stroke: #f4f4fd;
 }
 
-/* Активований стан чекбоксу */
-.checkbox input[type="checkbox"]:checked + .form-checkmark {
+input:checked + label .form-checkmark {
   background-color: #404bbf;
   border: none;
 }
 
-.checkbox input[type="checkbox"]:checked + .form-checkmark .svg-checkbox {
+input:checked + label .svg-checkbox {
   fill: #f4f4fd;
   stroke: #f4f4fd;
 }
@@ -770,13 +771,14 @@ button {
   padding: 16px 32px;
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
+  border: none;
 
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
